@@ -1,8 +1,11 @@
+library Animal;
+
 void main() {
   Kucing obj = new Kucing();
   obj.Golongan('Vivipar');
   Perbelanjaan dt = new Perbelanjaan();
   print(dt.dikurangi(20.3));
+  new Hewan()..Golongan('ovo');
 }
 
 class Hewan {

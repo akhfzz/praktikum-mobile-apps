@@ -4,7 +4,7 @@ class AmtException implements Exception {
 
 void main() {
   try {
-    withdraw_amt(-1);
+    withdraw_amt(3);
   } catch (e) {
     AmtException e = new AmtException();
     print(e.errMsg());
@@ -14,7 +14,6 @@ void main() {
 }
 
 void withdraw_amt(int amt) {
-  if (amt <= 0) {
-    throw new AmtException();
-  }
+  var exc = amt < 0 ? throw new AmtException() : amt; //true:false
+  print(exc);
 }
